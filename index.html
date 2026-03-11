@@ -399,7 +399,33 @@
             <!-- Important Note -->
             <div class="mt-12 bg-yellow-500/5 border border-yellow-500/20 p-8 rounded-3xl text-slate-300 leading-relaxed shadow-lg">
                 <p class="flex items-start gap-4">
-                    <span class="text-2xl">⚠️</span>
+                    <span class="flex-shrink-0">
+                        <svg width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Isometric Depth Shadows -->
+                            <path d="M32 6L58 50L52 54L32 10V6Z" fill="#300060" fill-opacity="0.9"/>
+                            <path d="M6 50L32 54L58 50L52 54L32 58L10 54V50Z" fill="#200040" fill-opacity="0.9"/>
+                            <!-- Front Triangle Face with Cyber Gradient -->
+                            <path d="M32 6L58 50H6L32 6Z" fill="url(#warnGrad)" stroke="white" stroke-width="0.5" stroke-opacity="0.2"/>
+                            <!-- Neon Yellow Exclamation Mark -->
+                            <g filter="url(#warnGlow)">
+                                <rect x="30" y="22" width="4" height="14" rx="2" fill="#FFFF00"/>
+                                <circle cx="32" cy="42" r="3.5" fill="#FFFF00"/>
+                            </g>
+                            <defs>
+                                <linearGradient id="warnGrad" x1="32" y1="6" x2="32" y2="50" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#00d2ff"/>
+                                    <stop offset="1" stop-color="#7000ff"/>
+                                </linearGradient>
+                                <filter id="warnGlow" x="20" y="10" width="24" height="44" filterUnits="userSpaceOnUse">
+                                    <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+                                    <feMerge>
+                                        <feMergeNode in="coloredBlur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                        </svg>
+                    </span>
                     <span>
                         <strong class="text-yellow-500 block text-lg mb-1">שימו לב:</strong>
                         חלק מהכלים בתשלום ולכן המשתתפים יצטרכו לשלם על אחד מבין האפשרויות שיוצגו לחודש להיכרות והתנסות. ניתן לבטל את המינויים לאחר חודש. לא ניתן לבנות הכל בכלים חינמיים בלבד — אנחנו מכוונים לתוצאה מקצועית בקצה.
